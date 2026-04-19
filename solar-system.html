@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System - Multimedia Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Portfolio</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rotoscope.html">Rotoscope</a></li>
+                <li><a href="solar-system.html" class="active">Solar System</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="project-header-section">
+            <h1>Solar System Animation</h1>
+            <p class="description">A comprehensive 3D animation of our solar system created using Blender with Python scripting for accurate planetary motion and physics.</p>
+        </section>
+
+        <section class="section">
+            <h2>3D Animation</h2>
+            <div class="video-container">
+                <div class="placeholder-video">
+                    <p>🌍 Solar System 3D Animation (Placeholder)</p>
+                    <p style="font-size: 0.9em; color: #999;">Blender animation video will be embedded here</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Planetary Age Calculator</h2>
+            <div class="calculator-container">
+                <p>Enter your age in Earth years to discover how old you would be on other planets!</p>
+                
+                <div class="calculator">
+                    <label for="age-input">Your Age (in Earth years):</label>
+                    <input type="number" id="age-input" placeholder="Enter your age" min="0" max="150">
+                    <button onclick="calculateAge()" class="btn">Calculate</button>
+                </div>
+
+                <div id="results" class="results-grid" style="display: none;">
+                    <div class="planet-result">
+                        <h3>Mercury</h3>
+                        <p class="age-result" id="mercury-age">--</p>
+                        <p class="planet-info">Years old on Mercury</p>
+                    </div>
+                    <div class="planet-result">
+                        <h3>Venus</h3>
+                        <p class="age-result" id="venus-age">--</p>
+                        <p class="planet-info">Years old on Venus</p>
+                    </div>
+                    <div class="planet-result">
+                        <h3>Earth</h3>
+                        <p class="age-result" id="earth-age">--</p>
+                        <p class="planet-info">Years old on Earth</p>
+                    </div>
+                    <div class="planet-result">
+                        <h3>Mars</h3>
+                        <p class="age-result" id="mars-age">--</p>
+                        <p class="planet-info">Years old on Mars</p>
+                    </div>
+                    <div class="planet-result">
+                        <h3>Jupiter</h3>
+                        <p class="age-result" id="jupiter-age">--</p>
+                        <p class="planet-info">Years old on Jupiter</p>
+                    </div>
+                    <div class="planet-result">
+                        <h3>Saturn</h3>
+                        <p class="age-result" id="saturn-age">--</p>
+                        <p class="planet-info">Years old on Saturn</p>
+                    </div>
+                    <div class="planet-result">
+                        <h3>Uranus</h3>
+                        <p class="age-result" id="uranus-age">--</p>
+                        <p class="planet-info">Years old on Uranus</p>
+                    </div>
+                    <div class="planet-result">
+                        <h3>Neptune</h3>
+                        <p class="age-result" id="neptune-age">--</p>
+                        <p class="planet-info">Years old on Neptune</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Project Overview</h2>
+            
+            <div class="overview-grid">
+                <div class="overview-item">
+                    <h3>Tools Used</h3>
+                    <ul>
+                        <li>Blender</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
+                <div class="overview-item">
+                    <h3>Resolution</h3>
+                    <p>1920 x 1080</p>
+                </div>
+            </div>
+
+            <div class="overview-description">
+                <h3>Description</h3>
+                <p>This solar system animation combines artistic visualization with scientific accuracy. Each celestial body rotates on its axis and revolves around the Sun with astronomically accurate timing and axial tilts.</p>
+                <p>The Python script handles orbital mechanics and positioning based on real astronomical data, ensuring relative speeds and distances are accurate while maintaining visual clarity.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Multimedia Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
