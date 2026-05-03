@@ -7,7 +7,8 @@ const orbitalPeriods = {
     jupiter: 4333,
     saturn: 10759,
     uranus: 30688,
-    neptune: 60182
+    neptune: 60182,
+    pluto: 90582
 };
 
 // Celestial bodies profile data
@@ -216,7 +217,13 @@ function renderCelestialProfiles() {
     const container = document.getElementById('celestial-profiles');
     if (!container) return;
 
-    container.innerHTML = celestialBodies.map(body => `
+    const gifBaseUrl = './assets/gifs/';
+
+    container.innerHTML = celestialBodies.map(body => {
+        const gifName = encodeURIComponent(body.name);
+        const gifSrc = `${gifBaseUrl}${gifName}/${gifName}.gif`;
+
+        return `
         <div class="profile-card-row">
             <article class="profile-card">
                 <div class="profile-card-header">
@@ -238,11 +245,12 @@ function renderCelestialProfiles() {
                     ${body.funFacts.map(fact => `<li>${fact}</li>`).join('')}
                 </ul>
             </article>
-            <div class="profile-placeholder">
-                <p>Placeholder for ${body.name} video or GIF upload</p>
+            <div class="profile-placeholder has-image">
+                <img src="${gifSrc}" alt="${body.name} animation GIF">
             </div>
         </div>
-    `).join('');
+    `;
+    }).join('');
 }
 
 function calculateAge() {
@@ -253,7 +261,7 @@ function calculateAge() {
         return;
     }
 
-    const earthDays = ageInput * 365;
+    const earthDays = ageInput * 365.25;
     
     // Calculate age on each planet
     const ages = {
@@ -264,7 +272,8 @@ function calculateAge() {
         jupiter: (earthDays / orbitalPeriods.jupiter).toFixed(2),
         saturn: (earthDays / orbitalPeriods.saturn).toFixed(2),
         uranus: (earthDays / orbitalPeriods.uranus).toFixed(2),
-        neptune: (earthDays / orbitalPeriods.neptune).toFixed(2)
+        neptune: (earthDays / orbitalPeriods.neptune).toFixed(2),
+        pluto: (earthDays / orbitalPeriods.pluto).toFixed(2)
     };
 
     // Update results display
@@ -276,6 +285,7 @@ function calculateAge() {
     document.getElementById('saturn-age').textContent = ages.saturn;
     document.getElementById('uranus-age').textContent = ages.uranus;
     document.getElementById('neptune-age').textContent = ages.neptune;
+    document.getElementById('pluto-age').textContent = ages.pluto;
 
     // Show results
     document.getElementById('results').style.display = 'grid';

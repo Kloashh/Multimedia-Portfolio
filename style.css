@@ -800,6 +800,26 @@ main {
     -webkit-backdrop-filter: blur(10px);
 }
 
+.profile-placeholder.has-image {
+    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.04);
+    padding: 0;
+    min-height: 320px;
+}
+
+.profile-placeholder.has-image::before,
+.profile-placeholder.has-image::after {
+    display: none;
+}
+
+.profile-placeholder.has-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
 .profile-placeholder:hover {
     border-color: rgba(102, 126, 234, 0.9);
     background: linear-gradient(135deg, rgba(102, 126, 234, 0.15), rgba(118, 75, 162, 0.15));
