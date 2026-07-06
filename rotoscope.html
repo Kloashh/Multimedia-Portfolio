@@ -25,42 +25,61 @@
             <p class="description">Rotoscoping is a frame-by-frame animation technique where each frame of a video is manually traced or redrawn. This labor-intensive process creates a unique "hand-drawn" effect while maintaining the precise movement and details of the original video reference.</p>
         </section>
 
-        <section class="section">
-            <h2>The Rotoscoping Process</h2>
-            <div class="process-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Find a video to rotoscope and import it into the software</h3>
-                    <p>Begin by selecting video footage with clear movement and distinct features for easier tracing. Open Adobe After Effects, import the video, and place it on the timeline or canvas.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Create a new layer for tracing</h3>
-                    <p>Add a new layer above the video and lower the opacity of the original footage so your tracing lines are easier to see.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Trace the subject frame by frame</h3>
-                    <p>Carefully trace the subject in each frame using clean lines. Focus on major shapes first, then add smaller details as the animation progresses.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>Refine and continue the animation</h3>
-                    <p>Move frame by frame, adjusting your drawings slightly to match the movement. Keep proportions and line style consistent throughout the sequence.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">5</div>
-                    <h3>Export the final rotoscoped video</h3>
-                    <p>Once all frames are completed, hide the original footage and review your work. Export or render the sequence into a final video file.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">6</div>
-                    <h3>Final touches</h3>
-                    <p>Edit the rotoscoped video, add backgrounds, text, and any other necessary finishing touches to complete the project.</p>
-                </div>
-            </div>
-        </section>
+<section class="section">
+    <h2>The Rotoscoping Process</h2>
 
+    <div class="process-steps">
+
+        <div class="step">
+            <div class="step-number">1</div>
+            <h3>Select the source video and extract individual frames</h3>
+            <p>
+                The first step was choosing a video with clear movement and expressive choreography that would be suitable for rotoscoping. Using FFmpeg, the video was converted into thousands of individual image frames. These images served as the reference for tracing every movement throughout the animation.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">2</div>
+            <h3>Import the frames into Krita and create a tracing layer</h3>
+            <p>
+                The extracted image sequence was imported into Krita's animation workspace. A separate drawing layer was created above the original frames, allowing each frame to be manually traced while keeping the reference visible underneath. This setup made it easier to maintain accurate proportions and smooth movement.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">3</div>
+            <h3>Trace each frame and export the completed drawings</h3>
+            <p>
+                Every frame was carefully redrawn by hand using Krita's animation tools. The tracing process required consistency in line work, proportions, and motion across the entire sequence. After completing the animation, the finished drawings were exported as another sequence of individual image files.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">4</div>
+            <h3>Compile the image sequence into a video using FFmpeg</h3>
+            <p>
+                Once all traced frames had been exported, FFmpeg was used again to combine the image sequence into a continuous video. This recreated the animation at the intended frame rate while preserving the quality of every individual drawing.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">5</div>
+            <h3>Add visual effects, lyrics, and final edits</h3>
+            <p>
+                The completed rotoscope animation was imported into a video editing application for post-production. Additional effects, text, lyrics, transitions, timing adjustments, and other finishing touches were added to improve the overall presentation and produce a polished final output.
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">6</div>
+            <h3>Publish the finished animation on YouTube</h3>
+            <p>
+                After the final video was rendered, it was uploaded to YouTube for online viewing and portfolio presentation. The published video was then embedded into this webpage, allowing viewers to watch the completed rotoscope animation directly within the portfolio.
+            </p>
+        </div>
+
+    </div>
+</section>
 <section class="section">
     <h2>Video Reference</h2>
 
