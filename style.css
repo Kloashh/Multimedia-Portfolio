@@ -418,8 +418,18 @@ main {
 }
 
 /* Video Container */
-.video-container {
-    margin: 3rem 0;
+.video-container{
+    width: 100%;
+    max-width: 900px;   /* optional */
+    margin: auto;
+    aspect-ratio: 16 / 9;
+}
+
+.video-container iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
 }
 
 .placeholder-video {
