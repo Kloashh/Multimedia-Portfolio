@@ -1049,3 +1049,35 @@ footer {
         max-width: 100%;
     }
 }
+
+/* Disclaimer Box */
+.disclaimer-box{
+    margin-top: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #fff8e8, #fffdf7);
+    border-left: 6px solid #f4b942;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.disclaimer-box h3{
+    color: #b87400;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.disclaimer-box p{
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.disclaimer-box p:last-child{
+    margin-bottom: 0;
+}
+
+.disclaimer-box strong{
+    color: #333;
+}
